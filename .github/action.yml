@@ -17,7 +17,6 @@ jobs:
         with:
           aws-region: us-east-1 # Replace with your AWS region
           registry: 099440147872.dkr.ecr.us-east-1.amazonaws.com/stable-audio-open # Replace with your ECR registry URI
-          registry: ${{ secrets.AWS_ECR_REGISTRY_URI }}
       - name: Build the Docker Image
         run: |
           docker build -t stable-audio-open .
